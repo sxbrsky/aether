@@ -1,0 +1,27 @@
+{
+  "name": "aether/aether",
+  "license": "MIT",
+  "type": "project",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "aether/core": "self.version"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "app/core"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "8.3.0"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
