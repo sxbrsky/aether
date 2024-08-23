@@ -1,0 +1,23 @@
+# phpstorm
+.idea/
+
+# vscode
+.vscode/
+
+# composer
+composer.lock
+composer.phar
+vendor/
+
+# php-cs-fixer
+.php-cs-fixer.cache
+.php-cs-fixer.php
+
+# phpunit
+.phpunit.cache
+.phpunit.result.cache
+phpunit.xml
+
+# phpstan
+.phpstan.cache
+.phpstan.neon

@@ -1,0 +1,15 @@
+{
+  "name": "aether/core",
+  "license": "MIT",
+  "type": "project",
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.62.0",
+    "phpstan/phpstan": "^2.0.x-dev",
+    "phpunit/phpunit": "^11.4.x-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aether\\Core\\": "lib/Aether/Core/"
+    }
+  }
+}
