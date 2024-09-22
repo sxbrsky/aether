@@ -1,0 +1,13 @@
+parameters:
+    fileExtensions:
+        - php
+        - dist
+
+    excludePaths:
+        - */vendor/
+
+    level: max
+    inferPrivatePropertyTypeFromConstructor: true
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+

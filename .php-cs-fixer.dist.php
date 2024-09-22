@@ -1,18 +1,21 @@
 <?php
 
-use PhpCsFixer\Config;
-use PhpCsFixer\Finder;
+/*
+ * This file is part of the sxbrsky/aether.
+ *
+ * Copyright (C) 2024 Dominik Szamburski
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license. See the LICENSE file for details.
+ */
 
-$finder = Finder::create()
-  ->in([
-    __DIR__ . '/lib',
-    __DIR__ . '/tests',
-  ])
+$finder = PhpCsFixer\Finder::create()
   ->name('*.php')
   ->ignoreDotFiles(TRUE)
   ->ignoreVCS(TRUE);
 
-return (new Config())
+$config = new PhpCsFixer\Config();
+$config->setFinder($finder)
   ->setRules([
     '@PSR12' => TRUE,
     'array_syntax' => ['syntax' => 'short'],
@@ -51,6 +54,6 @@ return (new Config())
       'keep_multiple_spaces_after_comma' => TRUE,
     ],
     'single_trait_insert_per_statement' => TRUE,
-  ])
-  ->setFinder($finder);
+  ]);
 
+return $config;

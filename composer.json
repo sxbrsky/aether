@@ -7,16 +7,22 @@
     "source": "https://github.com/sxbrsky/aether"
   },
   "require": {
-    "aether/core": "self.version"
+    "php": ">=8.2"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "app/core"
-    }
-  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.64",
+    "phpstan/phpstan": "^1.12",
+    "phpunit/phpunit": "^11.3"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "autoload": {
+    "Aether\\Framework\\": "system/Framework"
+  },
+  "autoload-dev": {
+    "Aehger\\Tests\\PHPStan\\": "dev/phpstan/",
+    "Aether\\Tests\\Unit\\": "dev/tests/unit/"
+  },
   "config": {
     "platform": {
       "php": "8.3.0"
