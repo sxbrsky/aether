@@ -7,7 +7,8 @@
     "source": "https://github.com/sxbrsky/aether"
   },
   "require": {
-    "php": ">=8.2"
+    "php": ">=8.2",
+    "symfony/http-foundation": "^7.1"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.64",
@@ -17,11 +18,15 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
-    "Aether\\Framework\\": "system/Framework"
+    "psr-4": {
+      "Aether\\Framework\\": "system/Framework/"
+    }
   },
   "autoload-dev": {
-    "Aehger\\Tests\\PHPStan\\": "dev/phpstan/",
-    "Aether\\Tests\\Unit\\": "dev/tests/unit/"
+    "psr-4": {
+      "Aether\\Tests\\PHPStan\\": "dev/phpstan/",
+      "Aether\\Tests\\Unit\\": "dev/tests/unit/"
+    }
   },
   "config": {
     "platform": {
