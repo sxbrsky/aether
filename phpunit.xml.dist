@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.3/phpunit.xsd"
-         bootstrap="../bootstrap.php"
+         bootstrap="vendor/autoload.php"
          executionOrder="depends,defects"
          shortenArraysForExportThreshold="10"
          requireCoverageMetadata="true"
@@ -11,17 +11,21 @@
          failOnPhpunitDeprecation="true"
          failOnRisky="true"
          failOnWarning="true">
+
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="memory_limit" value="-1"/>
+    </php>
+
     <testsuites>
-        <testsuite name="unit tests">
-            <directory>../../../app/modules/*/*/Tests</directory>
-            <directory>./Framework</directory>
+        <testsuite name="Aether Components Test Suite">
+            <directory>./src/*/tests/</directory>
         </testsuite>
     </testsuites>
 
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
-            <directory>../../../app/modules/*</directory>
-            <directory>../../../system/*</directory>
+            <directory>./src/*/src/</directory>
         </include>
     </source>
 </phpunit>

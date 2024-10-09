@@ -1,0 +1,12 @@
+name: Split Monorepo
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - 'master'
+  release:
+    types: [ created ]
+
+jobs:
+
