@@ -9,7 +9,8 @@
     },
     "require": {
         "php": "^8.2",
-        "psr/clock": "^1.0"
+        "psr/clock": "^1.0",
+        "psr/container": "^2.0.x-dev"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.64",
@@ -19,21 +20,25 @@
         "symplify/monorepo-builder": "^11.2"
     },
     "replace": {
-        "aether/clock": "self.version"
+        "aether/clock": "self.version",
+        "aether/dependency-injection": "self.version"
     },
     "provide": {
-        "psr/clock-implementation": "*"
+        "psr/clock-implementation": "*",
+        "psr/container-implementation": "2.0.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Aether\\Clock\\": "packages/Clock/src/"
+            "Aether\\Clock\\": "packages/Clock/src/",
+            "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aether\\Tests\\Clock\\": "packages/Clock/tests/"
+            "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
+            "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/"
         }
     },
     "config": {
