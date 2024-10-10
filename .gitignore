@@ -12,3 +12,6 @@ vendor/
 # php-cs-fixer
 .php-cs-fixer.cache
 .php-cs-fixer.php
+
+# phpunit
+.phpunit.result.cache

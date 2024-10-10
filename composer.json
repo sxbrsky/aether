@@ -1,38 +1,46 @@
 {
-  "name": "aether/aether",
-  "license": "MIT",
-  "type": "project",
-  "support": {
-    "issues": "https://github.com/sxbrsky/aether/issues",
-    "source": "https://github.com/sxbrsky/aether"
-  },
-  "require": {
-    "php": ">=8.2",
-    "symfony/http-foundation": "^7.1"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.64",
-    "phpstan/phpstan": "^1.12",
-    "phpunit/phpunit": "^11.3"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "autoload": {
-    "psr-4": {
-      "Aether\\Framework\\": "system/Framework/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Aether\\Tests\\PHPStan\\": "dev/phpstan/",
-      "Aether\\Tests\\Unit\\": "dev/tests/unit/"
-    }
-  },
-  "config": {
-    "platform": {
-      "php": "8.3.0"
+    "name": "aether/aether",
+    "description": "The component framework.",
+    "license": "MIT",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/sxbrsky/aether/issues",
+        "source": "https://github.com/sxbrsky/aether"
     },
-    "preferred-install": "dist",
-    "sort-packages": true
-  }
+    "require": {
+        "php": "^8.2",
+        "psr/clock": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^1.12",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "phpunit/phpunit": "^11.3",
+        "symplify/monorepo-builder": "^11.2"
+    },
+    "replace": {
+        "aether/clock": "self.version"
+    },
+    "provide": {
+        "psr/clock-implementation": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Aether\\Clock\\": "packages/Clock/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aether\\Tests\\Clock\\": "packages/Clock/tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
 }
