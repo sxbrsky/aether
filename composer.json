@@ -28,7 +28,8 @@
         "aether/entity": "self.version",
         "aether/filesystem": "self.version",
         "aether/http": "self.version",
-        "aether/routing": "self.version"
+        "aether/routing": "self.version",
+        "aether/support": "self.version"
     },
     "provide": {
         "psr/clock-implementation": "*",
@@ -46,7 +47,8 @@
             "Aether\\Entity\\": "packages/Entity/src/",
             "Aether\\Filesystem\\": "packages/Filesystem/src/",
             "Aether\\Http\\": "packages/Http/src/",
-            "Aether\\Routing\\": "packages/Routing/src/"
+            "Aether\\Routing\\": "packages/Routing/src/",
+            "Aether\\Support\\": "packages/Support/src/"
         }
     },
     "autoload-dev": {
@@ -57,7 +59,8 @@
             "Aether\\Tests\\Entity\\": "packages/Entity/tests/",
             "Aether\\Tests\\Filesystem\\": "packages/Filesystem/tests/",
             "Aether\\Tests\\Http\\": "packages/Http/tests/",
-            "Aether\\Tests\\Routing\\": "packages/Routing/tests/"
+            "Aether\\Tests\\Routing\\": "packages/Routing/tests/",
+            "Aether\\Tests\\Support\\": "packages/Support/tests/"
         }
     },
     "config": {
