@@ -24,7 +24,8 @@
     "replace": {
         "aether/clock": "self.version",
         "aether/dependency-injection": "self.version",
-        "aether/http": "self.version"
+        "aether/http": "self.version",
+        "aether/routing": "self.version"
     },
     "provide": {
         "psr/clock-implementation": "*",
@@ -38,14 +39,16 @@
         "psr-4": {
             "Aether\\Clock\\": "packages/Clock/src/",
             "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
-            "Aether\\Http\\": "packages/Http/src/"
+            "Aether\\Http\\": "packages/Http/src/",
+            "Aether\\Routing\\": "packages/Routing/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
             "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
-            "Aether\\Tests\\Http\\": "packages/Http/tests/"
+            "Aether\\Tests\\Http\\": "packages/Http/tests/",
+            "Aether\\Tests\\Routing\\": "packages/Routing/tests/"
         }
     },
     "config": {

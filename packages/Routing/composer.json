@@ -1,0 +1,28 @@
+{
+  "name": "aether/routing",
+  "description": "The Aether routing package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "php": "^8.2",
+    "aether/http": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\Routing\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\Routing\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
