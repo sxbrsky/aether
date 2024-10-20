@@ -1,0 +1,31 @@
+{
+  "name": "aether/cache",
+  "description": "The Aether cache package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "provide": {
+    "psr/cache": "*"
+  },
+  "require": {
+    "php": "^8.2",
+    "psr/cache": "^3.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\Cache\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\Cache\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

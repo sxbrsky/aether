@@ -9,6 +9,7 @@
     },
     "require": {
         "php": "^8.2",
+        "psr/cache": "^3.0",
         "psr/clock": "^1.0",
         "psr/container": "^2.0.x-dev",
         "psr/http-factory": "^1.1",
@@ -22,6 +23,7 @@
         "symplify/monorepo-builder": "^11.2"
     },
     "replace": {
+        "aether/cache": "self.version",
         "aether/clock": "self.version",
         "aether/database": "self.version",
         "aether/dependency-injection": "self.version",
@@ -32,6 +34,7 @@
         "aether/support": "self.version"
     },
     "provide": {
+        "psr/cache": "*",
         "psr/clock-implementation": "*",
         "psr/container-implementation": "2.0.2",
         "psr/http-factory": "*",
@@ -41,6 +44,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
+            "Aether\\Cache\\": "packages/Cache/src/",
             "Aether\\Clock\\": "packages/Clock/src/",
             "Aether\\Database\\": "packages/Database/src/",
             "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
@@ -53,6 +57,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "Aether\\Tests\\Cache\\": "packages/Cache/tests/",
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
             "Aether\\Tests\\Database\\": "packages/Database/tests/",
             "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
