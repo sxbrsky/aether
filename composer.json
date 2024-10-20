@@ -10,7 +10,9 @@
     "require": {
         "php": "^8.2",
         "psr/clock": "^1.0",
-        "psr/container": "^2.0.x-dev"
+        "psr/container": "^2.0.x-dev",
+        "psr/http-factory": "^1.1",
+        "psr/http-message": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.64",
@@ -21,24 +23,29 @@
     },
     "replace": {
         "aether/clock": "self.version",
-        "aether/dependency-injection": "self.version"
+        "aether/dependency-injection": "self.version",
+        "aether/http": "self.version"
     },
     "provide": {
         "psr/clock-implementation": "*",
-        "psr/container-implementation": "2.0.2"
+        "psr/container-implementation": "2.0.2",
+        "psr/http-factory": "*",
+        "psr/http-message": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Aether\\Clock\\": "packages/Clock/src/",
-            "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/"
+            "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
+            "Aether\\Http\\": "packages/Http/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
-            "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/"
+            "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
+            "Aether\\Tests\\Http\\": "packages/Http/tests/"
         }
     },
     "config": {
