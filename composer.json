@@ -26,6 +26,7 @@
     "replace": {
         "aether/cache": "self.version",
         "aether/clock": "self.version",
+        "aether/config": "self.version",
         "aether/database": "self.version",
         "aether/dependency-injection": "self.version",
         "aether/entity": "self.version",
@@ -39,9 +40,9 @@
         "psr/cache": "*",
         "psr/clock-implementation": "*",
         "psr/container-implementation": "2.0.2",
-        "psr/event-dispatcher": "*",
-        "psr/http-factory": "*",
-        "psr/http-message": "*"
+        "psr/event-dispatcher-implementation": "*",
+        "psr/http-factory-implementation": "*",
+        "psr/http-message-implementation": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -49,6 +50,7 @@
         "psr-4": {
             "Aether\\Cache\\": "packages/Cache/src/",
             "Aether\\Clock\\": "packages/Clock/src/",
+            "Aether\\Config\\": "packages/Config/src/",
             "Aether\\Database\\": "packages/Database/src/",
             "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
             "Aether\\Entity\\": "packages/Entity/src/",
@@ -63,6 +65,7 @@
         "psr-4": {
             "Aether\\Tests\\Cache\\": "packages/Cache/tests/",
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
+            "Aether\\Tests\\Config\\": "packages/Config/tests/",
             "Aether\\Tests\\Database\\": "packages/Database/tests/",
             "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
             "Aether\\Tests\\Entity\\": "packages/Entity/tests/",

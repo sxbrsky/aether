@@ -1,6 +1,6 @@
 {
-  "name": "aether/http",
-  "description": "The Aether http package.",
+  "name": "aether/config",
+  "description": "The Aether config package.",
   "license": "MIT",
   "type": "library",
   "support": {
@@ -8,23 +8,17 @@
     "source": "https://github.com/sxbrsky/aether"
   },
   "require": {
-    "php": "^8.2",
-    "psr/http-factory": "^1.1",
-    "psr/http-message": "*"
-  },
-  "provide": {
-    "psr/http-factory-implementation": "*",
-    "psr/http-message-implementation": "*"
+    "php": "^8.2"
   },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Aether\\Http\\": "src/"
+      "Aether\\Config\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Aether\\Tests\\Http\\": "tests/"
+      "Aether\\Tests\\Config\\": "tests/"
     }
   },
   "config": {
