@@ -1,0 +1,27 @@
+{
+  "name": "aether/entity",
+  "description": "The Aether entity package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "php": "^8.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\Entity\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\Entity\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

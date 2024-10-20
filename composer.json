@@ -9,8 +9,12 @@
     },
     "require": {
         "php": "^8.2",
+        "psr/cache": "^3.0",
         "psr/clock": "^1.0",
-        "psr/container": "^2.0.x-dev"
+        "psr/container": "^2.0.x-dev",
+        "psr/event-dispatcher": "^1.0",
+        "psr/http-factory": "^1.1",
+        "psr/http-message": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.64",
@@ -20,25 +24,62 @@
         "symplify/monorepo-builder": "^11.2"
     },
     "replace": {
+        "aether/cache": "self.version",
         "aether/clock": "self.version",
-        "aether/dependency-injection": "self.version"
+        "aether/config": "self.version",
+        "aether/crypto": "self.version",
+        "aether/database": "self.version",
+        "aether/dependency-injection": "self.version",
+        "aether/entity": "self.version",
+        "aether/events": "self.version",
+        "aether/filesystem": "self.version",
+        "aether/foundation": "self.version",
+        "aether/http": "self.version",
+        "aether/routing": "self.version",
+        "aether/support": "self.version"
     },
     "provide": {
+        "psr/cache": "*",
         "psr/clock-implementation": "*",
-        "psr/container-implementation": "2.0.2"
+        "psr/container-implementation": "2.0.2",
+        "psr/event-dispatcher-implementation": "*",
+        "psr/http-factory-implementation": "*",
+        "psr/http-message-implementation": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
+            "Aether\\Cache\\": "packages/Cache/src/",
             "Aether\\Clock\\": "packages/Clock/src/",
-            "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/"
+            "Aether\\Config\\": "packages/Config/src/",
+            "Aether\\Crypto\\": "packages/Crypto/src/",
+            "Aether\\Database\\": "packages/Database/src/",
+            "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
+            "Aether\\Entity\\": "packages/Entity/src/",
+            "Aether\\Events\\": "packages/Events/src/",
+            "Aether\\Filesystem\\": "packages/Filesystem/src/",
+            "Aether\\Foundation\\": "packages/Foundation/src/",
+            "Aether\\Http\\": "packages/Http/src/",
+            "Aether\\Routing\\": "packages/Routing/src/",
+            "Aether\\Support\\": "packages/Support/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "Aether\\Tests\\Cache\\": "packages/Cache/tests/",
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
-            "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/"
+            "Aether\\Tests\\Config\\": "packages/Config/tests/",
+            "Aether\\Tests\\Crypto\\": "packages/Crypto/tests/",
+            "Aether\\Tests\\Database\\": "packages/Database/tests/",
+            "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
+            "Aether\\Tests\\Entity\\": "packages/Entity/tests/",
+            "Aether\\Tests\\Events\\": "packages/Events/tests/",
+            "Aether\\Tests\\Filesystem\\": "packages/Filesystem/tests/",
+            "Aether\\Tests\\Foundation\\": "packages/Foundation/tests/",
+            "Aether\\Tests\\Http\\": "packages/Http/tests/",
+            "Aether\\Tests\\Routing\\": "packages/Routing/tests/",
+            "Aether\\Tests\\Support\\": "packages/Support/tests/"
         }
     },
     "config": {

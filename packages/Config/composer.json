@@ -1,0 +1,27 @@
+{
+  "name": "aether/config",
+  "description": "The Aether config package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "php": "^8.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\Config\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\Config\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
