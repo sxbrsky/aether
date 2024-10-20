@@ -32,6 +32,7 @@
         "aether/entity": "self.version",
         "aether/events": "self.version",
         "aether/filesystem": "self.version",
+        "aether/foundation": "self.version",
         "aether/http": "self.version",
         "aether/routing": "self.version",
         "aether/support": "self.version"
@@ -56,6 +57,7 @@
             "Aether\\Entity\\": "packages/Entity/src/",
             "Aether\\Events\\": "packages/Events/src/",
             "Aether\\Filesystem\\": "packages/Filesystem/src/",
+            "Aether\\Foundation\\": "packages/Foundation/src/",
             "Aether\\Http\\": "packages/Http/src/",
             "Aether\\Routing\\": "packages/Routing/src/",
             "Aether\\Support\\": "packages/Support/src/"
@@ -71,6 +73,7 @@
             "Aether\\Tests\\Entity\\": "packages/Entity/tests/",
             "Aether\\Tests\\Events\\": "packages/Events/tests/",
             "Aether\\Tests\\Filesystem\\": "packages/Filesystem/tests/",
+            "Aether\\Tests\\Foundation\\": "packages/Foundation/tests/",
             "Aether\\Tests\\Http\\": "packages/Http/tests/",
             "Aether\\Tests\\Routing\\": "packages/Routing/tests/",
             "Aether\\Tests\\Support\\": "packages/Support/tests/"
