@@ -25,6 +25,7 @@
         "aether/clock": "self.version",
         "aether/database": "self.version",
         "aether/dependency-injection": "self.version",
+        "aether/entity": "self.version",
         "aether/filesystem": "self.version",
         "aether/http": "self.version",
         "aether/routing": "self.version"
@@ -42,6 +43,7 @@
             "Aether\\Clock\\": "packages/Clock/src/",
             "Aether\\Database\\": "packages/Database/src/",
             "Aether\\DependencyInjection\\": "packages/DependencyInjection/src/",
+            "Aether\\Entity\\": "packages/Entity/src/",
             "Aether\\Filesystem\\": "packages/Filesystem/src/",
             "Aether\\Http\\": "packages/Http/src/",
             "Aether\\Routing\\": "packages/Routing/src/"
@@ -52,6 +54,7 @@
             "Aether\\Tests\\Clock\\": "packages/Clock/tests/",
             "Aether\\Tests\\Database\\": "packages/Database/tests/",
             "Aether\\Tests\\DependencyInjection\\": "packages/DependencyInjection/tests/",
+            "Aether\\Tests\\Entity\\": "packages/Entity/tests/",
             "Aether\\Tests\\Filesystem\\": "packages/Filesystem/tests/",
             "Aether\\Tests\\Http\\": "packages/Http/tests/",
             "Aether\\Tests\\Routing\\": "packages/Routing/tests/"
