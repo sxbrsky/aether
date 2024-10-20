@@ -11,8 +11,8 @@
 
 namespace Aether\Filesystem;
 
-class Filesystem implements FilesystemInterface {
-
+class Filesystem implements FilesystemInterface
+{
     public function exists(string $path): bool
     {
         if (\strlen($path) > \PHP_MAXPATHLEN - 2) {
@@ -24,7 +24,7 @@ class Filesystem implements FilesystemInterface {
 
     public function read(string $path): string
     {
-        if (!$this->exists($path) && !$this->isFile($path)) {
+        if (! $this->exists($path) && ! $this->isFile($path)) {
             throw new IOException("File $path does not exists.");
         }
 
@@ -81,14 +81,16 @@ class Filesystem implements FilesystemInterface {
             throw new IOException("Failed to create a directory '".$directory."'.");
         }
     }
-    public function rmdir(string $directory): void {
-        if (!$this->isDirectory($directory)) {
+
+    public function rmdir(string $directory): void
+    {
+        if (! $this->isDirectory($directory)) {
             throw new IOException("Directory $directory does not exists.");
         }
 
         $items = new \FilesystemIterator($directory);
         foreach ($items as $item) {
-            $item->isDir() && !$item->isLink()
+            $item->isDir() && ! $item->isLink()
                 ? $this->rmdir($item->getPathname())
                 : $this->unlink($item->getPathname());
         }
@@ -119,13 +121,12 @@ class Filesystem implements FilesystemInterface {
 
     public function filesize(string $path): int
     {
-        if (!$this->exists($path)) {
+        if (! $this->exists($path)) {
             throw new IOException("File $path does not exists.");
         }
 
         return \filesize($path);
     }
-
 
     public function isDirectory(string $path): bool
     {
@@ -139,7 +140,7 @@ class Filesystem implements FilesystemInterface {
 
     public function mimeType(string $path): string
     {
-        if (!$this->exists($path)) {
+        if (! $this->exists($path)) {
             throw new IOException("File not found $path");
         }
 

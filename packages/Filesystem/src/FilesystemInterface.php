@@ -11,7 +11,8 @@
 
 namespace Aether\Filesystem;
 
-interface FilesystemInterface {
+interface FilesystemInterface
+{
     /**
      * Checks if a file exists at the given path.
      *
