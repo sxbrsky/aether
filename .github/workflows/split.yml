@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: set-packages
         name: Generate Packages
-        run: echo "packages=$(php tools/get-packages.php | jq -c)" >> $GITHUB_OUTPUT
+        run: echo "packages=$(php tools/get-modified-packages.php | jq -c)" >> $GITHUB_OUTPUT
 
   split:
     needs: generate-packages
