@@ -21,6 +21,7 @@ jobs:
 
   split:
     needs: generate-packages
+    if: ${{ needs.generate-packages.outputs.packages != '[]' && needs.generate-packages.outputs.packages != '' }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.generate-packages.outputs.packages) }}
