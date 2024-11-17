@@ -1,0 +1,31 @@
+{
+  "name": "aether/di",
+  "description": "The Aether di package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "php": "^8.2",
+    "psr/container": "^2.0.x-dev"
+  },
+  "provide": {
+    "psr/container-implementation": "2.0.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\DI\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\DI\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
