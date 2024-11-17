@@ -1,24 +1,15 @@
 <?php
 
-/*
- * This file is part of the aether/aether.
- *
- * Copyright (C) 2024 Dominik Szamburski
- *
- * This software may be modified and distributed under the terms
- * of the MIT license. See the LICENSE file for details.
- */
+namespace Aether\Contracts\Filesystem;
 
-namespace Aether\Filesystem;
-
-interface FilesystemInterface
+interface Filesystem
 {
     /**
      * Checks if a file exists at the given path.
      *
      * @param string $path
      * @return bool
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function exists(string $path): bool;
 
@@ -37,7 +28,7 @@ interface FilesystemInterface
      * @param string $contents
      * @param bool $lock
      * @return void
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function write(string $path, string $contents, bool $lock = false): void;
 
@@ -46,10 +37,9 @@ interface FilesystemInterface
      *
      * @param string $source
      * @param string $destination
-
-     * @return void
+ * @return void
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function copy(string $source, string $destination): void;
 
@@ -61,7 +51,7 @@ interface FilesystemInterface
      *
      * @return void
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function move(string $source, string $destination): void;
 
@@ -86,10 +76,10 @@ interface FilesystemInterface
     /**
      * Deletes a file.
      *
-     * @param string|array $filename
+     * @param string|string[] $filename
      * @return void
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function unlink(string|array $filename): void;
 
@@ -102,7 +92,7 @@ interface FilesystemInterface
      *
      * @return void
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function mkdir(string $directory, int $mode = 0777, bool $recursive = true): void;
 
@@ -112,7 +102,7 @@ interface FilesystemInterface
      * @param string $directory
      * @return void
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function rmdir(string $directory): void;
 
@@ -154,7 +144,7 @@ interface FilesystemInterface
      * @param string $path
      * @return int
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function filesize(string $path): int;
 
@@ -180,7 +170,7 @@ interface FilesystemInterface
      * @param string $path
      * @return string
      *
-     * @throws \Aether\Filesystem\IOException
+     * @throws \Aether\Contracts\Filesystem\IOException
      */
     public function mimeType(string $path): string;
 }

@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\Filesystem;
+namespace Aether\Contracts\Filesystem;
 
 class IOException extends \RuntimeException
 {
