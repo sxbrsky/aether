@@ -76,7 +76,7 @@ interface Filesystem
     /**
      * Deletes a file.
      *
-     * @param string|array $filename
+     * @param string|string[] $filename
      * @return void
      *
      * @throws \Aether\Contracts\Filesystem\IOException
