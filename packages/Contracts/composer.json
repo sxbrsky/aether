@@ -1,0 +1,23 @@
+{
+    "name": "aether/contracts",
+    "description": "The Aether contracts package.",
+    "license": "MIT",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/sxbrsky/aether/issues",
+        "source": "https://github.com/sxbrsky/aether"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-fileinfo": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Aether\\Contracts\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
