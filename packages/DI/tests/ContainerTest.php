@@ -11,10 +11,7 @@
 
 namespace Aether\Tests\DI;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
 use Aether\DI\Container;
-use Aether\DI\ContainerInterface;
 use Aether\DI\Definition\Binding\Alias;
 use Aether\DI\Definition\Binding\Factory;
 use Aether\DI\Definition\Binding\Shared;
@@ -22,6 +19,8 @@ use Aether\DI\Definition\Resolver\DefinitionResolver;
 use Aether\DI\Definition\Resolver\ParameterResolver;
 use Aether\Tests\DI\Fixtures\SampleClass;
 use Aether\Tests\DI\Fixtures\SampleInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Alias::class)]
 #[CoversClass(Factory::class)]
@@ -32,7 +31,7 @@ use Aether\Tests\DI\Fixtures\SampleInterface;
 class ContainerTest extends TestCase
 {
     /** @psalm-suppress PropertyNotSetInConstructor */
-    private ContainerInterface $container;
+    private Container $container;
 
     public function setUp(): void
     {

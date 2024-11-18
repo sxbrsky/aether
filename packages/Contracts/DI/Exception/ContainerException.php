@@ -9,8 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\DI\Exception;
+namespace Aether\Contracts\DI\Exception;
 
-class RuntimeException extends \RuntimeException
+use Psr\Container\ContainerExceptionInterface;
+
+class ContainerException extends RuntimeException implements ContainerExceptionInterface
 {
 }

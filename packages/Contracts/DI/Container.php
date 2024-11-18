@@ -9,11 +9,11 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\DI;
+namespace Aether\Contracts\DI;
 
 use Psr\Container\ContainerInterface as BaseContainerInterface;
 
-interface ContainerInterface extends BaseContainerInterface, FactoryInterface, InvokerInterface
+interface Container extends BaseContainerInterface, Factory, Invoker
 {
     /**
      * Returns an entry of the container by its id.

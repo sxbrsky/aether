@@ -11,8 +11,8 @@
 
 namespace Aether\DI\Definition\Binding;
 
-use Closure;
 use Aether\DI\Definition\Definition;
+use Closure;
 
 final readonly class Factory implements Definition
 {

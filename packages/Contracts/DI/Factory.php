@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\DI;
+namespace Aether\Contracts\DI;
 
-interface FactoryInterface
+interface Factory
 {
     /**
      * Initializes a new instance of requested class using binding and set of parameters.
@@ -24,7 +24,7 @@ interface FactoryInterface
      * @return ($abstract is class-string ? T : int|float|string|callable|object|null)
      *
      * @throws \Aether\DI\Definition\Exception\CircularDependencyException
-     * @throws \Aether\DI\Exception\EntryNotFoundException
+     * @throws \Aether\Contracts\DI\Exception\EntryNotFoundException
      *
      * @template T of object
      */

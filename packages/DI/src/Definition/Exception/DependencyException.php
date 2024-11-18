@@ -11,7 +11,7 @@
 
 namespace Aether\DI\Definition\Exception;
 
-use Aether\DI\Exception\ContainerException;
+use Aether\Contracts\DI\Exception\ContainerException;
 
 class DependencyException extends ContainerException
 {

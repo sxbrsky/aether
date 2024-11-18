@@ -9,21 +9,20 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\Tests\DI\Invoker;
+namespace Aether\Tests\DI;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Aether\Contracts\DI\Exception\RuntimeException;
 use Aether\DI\Container;
-use Aether\DI\ContainerInterface;
 use Aether\DI\Definition\Binding\Alias;
 use Aether\DI\Definition\Binding\Shared;
 use Aether\DI\Definition\Resolver\DefinitionResolver;
 use Aether\DI\Definition\Resolver\ParameterResolver;
-use Aether\DI\Exception\RuntimeException;
-use Aether\DI\Invoker\Invoker;
+use Aether\DI\Invoker;
 use Aether\Tests\DI\Fixtures\ExtendedSampleClass;
 use Aether\Tests\DI\Fixtures\InvokableClass;
 use Aether\Tests\DI\Fixtures\SampleClass;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Invoker::class)]
 #[CoversClass(Container::class)]
@@ -33,7 +32,7 @@ use Aether\Tests\DI\Fixtures\SampleClass;
 #[CoversClass(ParameterResolver::class)]
 class InvokerTest extends TestCase
 {
-    private ContainerInterface $container;
+    private Container $container;
 
     public function setUp(): void
     {
