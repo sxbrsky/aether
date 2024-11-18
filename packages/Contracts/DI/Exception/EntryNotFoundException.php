@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\DI\Exception;
+namespace Aether\Contracts\DI\Exception;
 
 use Psr\Container\NotFoundExceptionInterface;
 

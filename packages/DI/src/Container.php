@@ -11,6 +11,19 @@
 
 namespace Aether\DI;
 
+use Aether\Contracts\DI\Container as ContainerContract;
+use Aether\Contracts\DI\Exception\EntryNotFoundException;
+use Aether\Contracts\DI\Factory as FactoryContract;
+use Aether\Contracts\DI\Invoker as InvokerContract;
+use Aether\DI\Definition\Binding\Alias;
+use Aether\DI\Definition\Binding\Factory;
+use Aether\DI\Definition\Binding\Scalar;
+use Aether\DI\Definition\Binding\Shared;
+use Aether\DI\Definition\Binding\WeakReference;
+use Aether\DI\Definition\Exception\CircularDependencyException;
+use Aether\DI\Definition\Resolver\DefinitionResolver;
+use Aether\DI\Definition\State;
+
 use function array_key_exists;
 
 use Closure;
@@ -22,26 +35,13 @@ use function is_scalar;
 use function is_string;
 use function property_exists;
 
-use Aether\DI\Definition\Binding\Alias;
-use Aether\DI\Definition\Binding\Factory;
-use Aether\DI\Definition\Binding\Scalar;
-use Aether\DI\Definition\Binding\Shared;
-use Aether\DI\Definition\Binding\WeakReference;
-
-use Aether\DI\Definition\Exception\CircularDependencyException;
-use Aether\DI\Definition\Resolver\DefinitionResolver;
-use Aether\DI\Definition\State;
-use Aether\DI\Exception\EntryNotFoundException;
-use Aether\DI\Invoker\Invoker;
-
-class Container implements ContainerInterface
+class Container implements ContainerContract
 {
     private State $state;
-    private FactoryInterface $factory;
+    private FactoryContract $factory;
 
     public function __construct()
     {
-
         $this->state = new State();
         $this->factory = new DefinitionResolver($this->state, $this);
 
@@ -49,9 +49,9 @@ class Container implements ContainerInterface
 
         $this->state->bindings = [
             self::class => new WeakReference(\WeakReference::create($this)),
-            ContainerInterface::class => $shared,
-            FactoryInterface::class => $shared,
-            InvokerInterface::class => $shared
+            ContainerContract::class => $shared,
+            Factory::class => $shared,
+            Invoker::class => $shared,
         ];
     }
 
@@ -85,6 +85,7 @@ class Container implements ContainerInterface
     public function instance(string $id, int|float|string|callable|object $instance): int|float|string|callable|object
     {
         $this->state->instances[$id] = $instance;
+
         return $instance;
     }
 
@@ -147,7 +148,7 @@ class Container implements ContainerInterface
         return $this->getInvoker()->call($callable, $parameters);
     }
 
-    private function getInvoker(): InvokerInterface
+    private function getInvoker(): InvokerContract
     {
         return new Invoker($this);
     }

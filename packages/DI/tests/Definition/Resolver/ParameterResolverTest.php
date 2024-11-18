@@ -11,12 +11,8 @@
 
 namespace Aether\Tests\DI\Definition\Resolver;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
-use ReflectionClass;
+use Aether\Contracts\DI\Container as ContainerContract;
 use Aether\DI\Container;
-use Aether\DI\ContainerInterface;
 use Aether\DI\Definition\Exception\DependencyException;
 use Aether\DI\Definition\Resolver\ParameterResolver;
 use Aether\DI\Definition\Resolver\ParameterResolverInterface;
@@ -25,11 +21,15 @@ use Aether\Tests\DI\Fixtures\ClassWithDependency;
 use Aether\Tests\DI\Fixtures\ExtendedSampleClass;
 use Aether\Tests\DI\Fixtures\SampleClass;
 use Aether\Tests\DI\Fixtures\TypedClass;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 #[CoversClass(ParameterResolver::class)]
 class ParameterResolverTest extends TestCase
 {
-    private MockObject|ContainerInterface $container;
+    private MockObject|ContainerContract $container;
     private ParameterResolverInterface $resolver;
 
     public function setUp(): void

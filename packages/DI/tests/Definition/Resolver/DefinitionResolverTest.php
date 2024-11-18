@@ -11,8 +11,8 @@
 
 namespace Aether\Tests\DI\Definition\Resolver;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Aether\Contracts\DI\Exception\ContainerException;
+use Aether\Contracts\DI\Exception\EntryNotFoundException;
 use Aether\DI\Container;
 use Aether\DI\Definition\Binding\Alias;
 use Aether\DI\Definition\Binding\Scalar;
@@ -20,11 +20,11 @@ use Aether\DI\Definition\Exception\CircularDependencyException;
 use Aether\DI\Definition\Resolver\DefinitionResolver;
 use Aether\DI\Definition\Resolver\ParameterResolver;
 use Aether\DI\Definition\State;
-use Aether\DI\Exception\ContainerException;
-use Aether\DI\Exception\EntryNotFoundException;
 use Aether\Tests\DI\Fixtures\ClassACircularDependency;
 use Aether\Tests\DI\Fixtures\SampleClass;
 use Aether\Tests\DI\Fixtures\SampleInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Alias::class)]
 #[CoversClass(Scalar::class)]

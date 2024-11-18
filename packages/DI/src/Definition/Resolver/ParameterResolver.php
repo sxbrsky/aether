@@ -11,17 +11,17 @@
 
 namespace Aether\DI\Definition\Resolver;
 
+use Aether\Contracts\DI\Container;
+use Aether\DI\Definition\Exception\DependencyException;
+
 use function array_key_exists;
 
 use ReflectionFunctionAbstract;
-use Aether\DI\ContainerInterface;
-
-use Aether\DI\Definition\Exception\DependencyException;
 
 final class ParameterResolver implements ParameterResolverInterface
 {
     public function __construct(
-        private readonly ContainerInterface $container
+        private readonly Container $container
     ) {
     }
 
@@ -44,11 +44,12 @@ final class ParameterResolver implements ParameterResolverInterface
 
             if (array_key_exists($parameter->getName(), $parameters)) {
                 $arguments[] = $parameters[$parameter->getName()];
-            } elseif ($type !== null && !$type->isBuiltin()) {
+            } elseif ($type !== null && ! $type->isBuiltin()) {
                 $arguments[] = $this->container->make($type->getName(), $parameters);
             } else {
                 if ($parameter->isDefaultValueAvailable() || $parameter->isOptional()) {
                     $arguments[] = $parameter->getDefaultValue();
+
                     continue;
                 }
 

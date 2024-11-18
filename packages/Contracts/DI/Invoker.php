@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Aether\DI;
+namespace Aether\Contracts\DI;
 
-interface InvokerInterface
+interface Invoker
 {
     /**
      * Calls the given function using the given parameters. Missing parameters will be resolved from the container.
